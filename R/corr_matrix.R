@@ -9,7 +9,7 @@
 
 
 corr_matrix <- function(year) {
-  num_data <- dplyr::select(data, where(is.numeric)) %>%
+  num_data <- dplyr::select(seasonstats, where(is.numeric)) %>%
                       filter(Year == year)
   num_data <- drop_na(num_data)
   cor(num_data)
