@@ -9,5 +9,5 @@
 
 highest_points <- function(year) {
   dplyr::filter(seasonstats, Year == year) %>%
-    summarise(Player[PTS == max(PTS)])
+    summarise(highest_player = Player[PTS == max(PTS)])
 }
